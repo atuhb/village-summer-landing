@@ -4919,5 +4919,12 @@
             });
         });
     </script>
+    <script>
+        document.querySelectorAll('a[href*="wa.me"]').forEach(function(el) {
+            el.addEventListener('click', function() {
+                fbq('track', 'Lead');
+            });
+        });
+    </script>
 </body>
 </html>
