@@ -2,7 +2,8 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "outputDirectory": ".",
-  "rewrites": [
-    { "source": "/imersao-parana", "destination": "/imersao-parana.html" }
+  "redirects": [
+    { "source": "/imersao-parana", "destination": "/", "permanent": false },
+    { "source": "/imersao-parana.html", "destination": "/", "permanent": false }
   ]
 }
