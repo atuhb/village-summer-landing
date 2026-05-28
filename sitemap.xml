@@ -63,12 +63,5 @@
         <priority>0.6</priority>
     </url>
 
-    <!-- Landing Page Imersão Paraná -->
-    <url>
-        <loc>https://villagesummersurf.com.br/imersao-parana.html</loc>
-        <lastmod>2026-05-20</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
 
 </urlset>

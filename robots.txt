@@ -5,7 +5,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://felipemlanna1.github.io/village-summer-landing/sitemap.xml
+Sitemap: https://villagesummersurf.com.br/sitemap.xml
 
 # Crawl-delay for polite crawling
 Crawl-delay: 1
