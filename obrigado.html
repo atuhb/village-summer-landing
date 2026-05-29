@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recebemos seu contato! | Village Summer</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7B3E28RJ1S"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-7B3E28RJ1S');
+    </script>
+
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --preto: #272727;
+            --amarelo: #FFBD59;
+            --branco: #FAF8F3;
+            --cinza: #5a5a5a;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 300;
+            background-color: var(--preto);
+            color: var(--branco);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .eyebrow {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--amarelo);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .eyebrow::before {
+            content: '';
+            width: 24px;
+            height: 2px;
+            background: var(--amarelo);
+        }
+
+        .eyebrow::after {
+            content: '';
+            width: 24px;
+            height: 2px;
+            background: var(--amarelo);
+        }
+
+        h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(52px, 9vw, 96px);
+            line-height: 0.95;
+            color: var(--branco);
+            margin-bottom: 1.5rem;
+        }
+
+        h1 span {
+            color: var(--amarelo);
+        }
+
+        p {
+            font-size: 1rem;
+            color: rgba(250, 248, 243, 0.7);
+            max-width: 420px;
+            line-height: 1.75;
+            margin-bottom: 2.5rem;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        @media (min-width: 480px) {
+            .buttons { flex-direction: row; }
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 16px 36px;
+            background: var(--amarelo);
+            color: var(--preto);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 13px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 2px;
+            transition: background 0.25s ease, transform 0.25s ease;
+        }
+
+        .btn-primary:hover {
+            background: #ffd080;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 15px 36px;
+            background: transparent;
+            color: var(--branco);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: 13px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: 1px solid rgba(250, 248, 243, 0.3);
+            border-radius: 2px;
+            transition: border-color 0.25s ease;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--branco);
+        }
+
+        .logo {
+            position: fixed;
+            top: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 12px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--amarelo);
+            border: 1px solid var(--amarelo);
+            border-radius: 6px;
+            padding: 5px 14px;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .wave {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <a class="logo" href="/">VILLAGE SUMMER</a>
+
+    <span class="wave">🤙</span>
+    <span class="eyebrow">Contato recebido</span>
+    <h1>A gente te<br>vê <span>no mar!</span></h1>
+    <p>Seu WhatsApp já abriu numa nova aba. Em breve a Ju ou o Kelvin entram em contato pra montar a melhor proposta pra você.</p>
+
+    <div class="buttons">
+        <a href="https://wa.me/554896899856?text=Olá! Gostaria de agendar uma aula de surf individual." class="btn-primary" target="_blank" rel="noopener">
+            Abrir WhatsApp
+        </a>
+        <a href="/" class="btn-secondary">
+            Voltar para o site
+        </a>
+    </div>
+</body>
+</html>

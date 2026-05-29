@@ -4932,5 +4932,17 @@
             });
         });
     </script>
+
+    <!-- WhatsApp CTA → conversão Google Ads -->
+    <script>
+        document.querySelectorAll('a[href*="wa.me"]').forEach(function(link) {
+            if (link.closest('footer')) return;
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.open(this.href, '_blank');
+                window.location.href = '/obrigado';
+            });
+        });
+    </script>
 </body>
 </html>
