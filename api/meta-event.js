@@ -46,6 +46,9 @@ module.exports = async (req, res) => {
             }
         );
         const data = await response.json();
+        console.log('Meta response:', JSON.stringify(data));
+        console.log('Meta status:', response.status);
+        console.log('Payload sent:', JSON.stringify({ ...payload, access_token: '[REDACTED]' }));
         return res.status(response.ok ? 200 : 400).json(data);
     } catch (err) {
         return res.status(500).json({ error: err.message });
