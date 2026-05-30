@@ -12,7 +12,6 @@
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '1660956965152744');
-    fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=1660956965152744&ev=PageView&noscript=1"
@@ -4925,22 +4924,35 @@
             });
         });
     </script>
+    <!-- Meta CAPI + Pixel deduplication + Google Ads conversion -->
     <script>
-        document.querySelectorAll('a[href*="wa.me"]').forEach(function(el) {
-            el.addEventListener('click', function() {
-                fbq('track', 'Lead');
-            });
-        });
-    </script>
+        function sendMetaCAPI(event_name, event_id) {
+            fetch('/api/meta-event', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ event_name, event_id }),
+            }).catch(function() {});
+        }
 
-    <!-- WhatsApp CTA → conversão Google Ads -->
-    <script>
+        // PageView — dispara pixel e CAPI com mesmo event_id
+        var pageViewId = crypto.randomUUID();
+        fbq('track', 'PageView', {}, { eventID: pageViewId });
+        sendMetaCAPI('PageView', pageViewId);
+
+        // WhatsApp CTA — Contact via pixel + CAPI + redirect Google Ads
         document.querySelectorAll('a[href*="wa.me"]').forEach(function(link) {
-            if (link.closest('footer')) return;
             link.addEventListener('click', function(e) {
-                e.preventDefault();
-                window.open(this.href, '_blank');
-                window.location.href = '/obrigado';
+                var isFooter = link.closest('footer');
+                var eventId = crypto.randomUUID();
+
+                fbq('track', 'Contact', {}, { eventID: eventId });
+                sendMetaCAPI('Contact', eventId);
+
+                if (!isFooter) {
+                    e.preventDefault();
+                    window.open(this.href, '_blank');
+                    window.location.href = '/obrigado';
+                }
             });
         });
     </script>
