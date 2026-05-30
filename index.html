@@ -4945,8 +4945,8 @@
                 var isFooter = link.closest('footer');
                 var eventId = crypto.randomUUID();
 
-                fbq('track', 'Contact', {}, { eventID: eventId });
-                sendMetaCAPI('Contact', eventId);
+                fbq('track', 'Lead', {}, { eventID: eventId });
+                sendMetaCAPI('Lead', eventId);
 
                 if (!isFooter) {
                     e.preventDefault();
